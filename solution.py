@@ -52,6 +52,7 @@ def receiveOnePing(mySocket, ID, timeout, destAddr):
         # Fetch the ICMP header from the IP packet
         icmpHeader = recPacket[20:28]
 
+
         # Fill in end
         timeLeft = timeLeft - howLongInSelect
         if timeLeft <= 0:
@@ -118,3 +119,4 @@ def ping(host, timeout=1):
 
 if __name__ == '__main__':
     ping("google.co.il")
+    ping("127.0.0.1")
